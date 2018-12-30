@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		5737575C21D88835008EE685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737575B21D88835008EE685 /* AppDelegate.swift */; };
-		5737575E21D88835008EE685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737575D21D88835008EE685 /* ViewController.swift */; };
+		5737575E21D88835008EE685 /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737575D21D88835008EE685 /* LogInController.swift */; };
 		5737576121D88835008EE685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5737575F21D88835008EE685 /* Main.storyboard */; };
 		5737576321D88836008EE685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5737576221D88836008EE685 /* Assets.xcassets */; };
 		5737576621D88836008EE685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5737576421D88836008EE685 /* LaunchScreen.storyboard */; };
+		5737577221D919A5008EE685 /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577121D919A5008EE685 /* LoginTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5737575821D88835008EE685 /* FindFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5737575B21D88835008EE685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5737575D21D88835008EE685 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5737575D21D88835008EE685 /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		5737576021D88835008EE685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5737576221D88836008EE685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5737576521D88836008EE685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5737576721D88836008EE685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5737577121D919A5008EE685 /* LoginTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginTextField.swift; path = ../../../../LoginTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +57,46 @@
 			isa = PBXGroup;
 			children = (
 				5737575B21D88835008EE685 /* AppDelegate.swift */,
-				5737575D21D88835008EE685 /* ViewController.swift */,
+				5737577021D91890008EE685 /* Asset */,
+				5737576F21D9185F008EE685 /* Model */,
+				5737576E21D91859008EE685 /* View */,
+				5737576D21D9184D008EE685 /* Controller */,
+			);
+			path = FindFriends;
+			sourceTree = "<group>";
+		};
+		5737576D21D9184D008EE685 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5737575D21D88835008EE685 /* LogInController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5737576E21D91859008EE685 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5737577121D919A5008EE685 /* LoginTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5737576F21D9185F008EE685 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5737577021D91890008EE685 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
 				5737575F21D88835008EE685 /* Main.storyboard */,
 				5737576221D88836008EE685 /* Assets.xcassets */,
 				5737576421D88836008EE685 /* LaunchScreen.storyboard */,
 				5737576721D88836008EE685 /* Info.plist */,
 			);
-			path = FindFriends;
+			path = Asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5737575E21D88835008EE685 /* ViewController.swift in Sources */,
+				5737577221D919A5008EE685 /* LoginTextField.swift in Sources */,
+				5737575E21D88835008EE685 /* LogInController.swift in Sources */,
 				5737575C21D88835008EE685 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
