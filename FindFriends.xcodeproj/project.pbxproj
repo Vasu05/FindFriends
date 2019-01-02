@@ -20,6 +20,8 @@
 		5737577F21D9CE99008EE685 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577E21D9CE99008EE685 /* LoginResponse.swift */; };
 		5737578321DB45CE008EE685 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578221DB45CE008EE685 /* CustomError.swift */; };
 		5737578721DB5D4C008EE685 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578621DB5D4C008EE685 /* HomePageVC.swift */; };
+		5737578921DBC782008EE685 /* StudentDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578821DBC782008EE685 /* StudentDetailsVC.swift */; };
+		5737578B21DBCC73008EE685 /* StudentsMapLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5737577E21D9CE99008EE685 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5737578221DB45CE008EE685 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		5737578621DB5D4C008EE685 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
+		5737578821DBC782008EE685 /* StudentDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsVC.swift; sourceTree = "<group>"; };
+		5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsMapLocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			children = (
 				5737575D21D88835008EE685 /* LogInController.swift */,
 				5737578621DB5D4C008EE685 /* HomePageVC.swift */,
+				5737578821DBC782008EE685 /* StudentDetailsVC.swift */,
+				5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5737578B21DBCC73008EE685 /* StudentsMapLocationVC.swift in Sources */,
 				5737578721DB5D4C008EE685 /* HomePageVC.swift in Sources */,
 				5737577921D9CA07008EE685 /* APPCredentials.swift in Sources */,
 				5737577721D9C949008EE685 /* APIEndpoints.swift in Sources */,
@@ -233,6 +240,7 @@
 				5737577C21D9CDE7008EE685 /* LoginRequest.swift in Sources */,
 				5737577F21D9CE99008EE685 /* LoginResponse.swift in Sources */,
 				5737577521D9C936008EE685 /* Engine.swift in Sources */,
+				5737578921DBC782008EE685 /* StudentDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

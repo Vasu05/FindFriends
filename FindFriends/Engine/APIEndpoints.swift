@@ -15,12 +15,14 @@ class APIEndPoints{
         static let base = "https://parse.udacity.com/parse/classes"
         
         case login
-        
+        case getUserLocations
         
         var stringValue: String {
             switch self {
             case .login:
                   return "https://onthemap-api.udacity.com/v1/session"
+            case .getUserLocations:
+                return ""
             
             }
         }
