@@ -12,7 +12,12 @@ class Engine {
     
     class func taskForGETRequest<ResponseType :Decodable>(url : URL,responseType : ResponseType.Type ,completion: @escaping (ResponseType? ,Error? ) -> Void){
         
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.allHTTPHeaderFields = ["X-Parse-Application-Id":AppCredentials.Parse_Application_ID ,"X-Parse-REST-API-Key":AppCredentials.REST_API_Key ]
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             
             guard let data = data else{
                 DispatchQueue.main.async {
@@ -20,7 +25,9 @@ class Engine {
                 }
                 return
             }
-            
+//            let range = Range(5..<data.count)
+//            let newData = data.subdata(in: range)
+//            print(String(data: newData, encoding: .utf8)!)
             let decoder = JSONDecoder()
             
             do{
@@ -30,9 +37,15 @@ class Engine {
                 }
             }
             catch{
-                DispatchQueue.main.async {
-                    completion(nil,error)
-                    
+                do{
+                    let errorResponse = try decoder.decode(CustomError.self, from: data) as Error
+                    DispatchQueue.main.async {
+                        completion(nil,errorResponse)
+                    }
+                }catch{
+                    DispatchQueue.main.async {
+                        completion(nil, error)
+                    }
                 }
             }
         }
@@ -93,5 +106,22 @@ class Engine {
                 completion(false, error)
             }
         }
+    }
+    class func getUsersLocation(completion:@escaping (StudentLocationsResponse?,Error?)->Void){
+     
+        taskForGETRequest(url: APIEndPoints.EndPoints.getUserLocations.url, responseType: StudentLocationsResponse.self) {
+            (data, error) in
+            
+            if let response = data {
+                
+                completion(response ,nil)
+            }
+            else{
+                completion(nil,error)
+            }
+            
+            
+        }
+        
     }
 }

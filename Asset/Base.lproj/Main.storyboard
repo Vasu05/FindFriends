@@ -140,12 +140,21 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="ZOd-ez-D5H">
+                                        <rect key="frame" x="149" y="216.5" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="NT2-yl-ASi"/>
+                                            <constraint firstAttribute="height" constant="22" id="W4w-Jn-1WP"/>
+                                        </constraints>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="ZOd-ez-D5H" firstAttribute="centerY" secondItem="SoJ-gl-du7" secondAttribute="centerY" id="WZO-rn-OUd"/>
                                     <constraint firstAttribute="trailing" secondItem="1E1-jj-6Cc" secondAttribute="trailing" id="fmd-Z9-Sw6"/>
                                     <constraint firstItem="1E1-jj-6Cc" firstAttribute="leading" secondItem="SoJ-gl-du7" secondAttribute="leading" id="g77-eb-7Nd"/>
                                     <constraint firstAttribute="bottom" secondItem="1E1-jj-6Cc" secondAttribute="bottom" id="lJC-0W-rTL"/>
+                                    <constraint firstItem="ZOd-ez-D5H" firstAttribute="centerX" secondItem="SoJ-gl-du7" secondAttribute="centerX" id="n2m-af-D4q"/>
                                     <constraint firstItem="1E1-jj-6Cc" firstAttribute="top" secondItem="SoJ-gl-du7" secondAttribute="top" id="pKa-DZ-fDr"/>
                                 </constraints>
                             </view>
@@ -161,6 +170,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4TM-Vn-lfM"/>
                     <connections>
+                        <outlet property="mActivityIndicator" destination="ZOd-ez-D5H" id="lnB-fb-VFv"/>
                         <outlet property="mTableView" destination="1E1-jj-6Cc" id="vMT-UB-vhe"/>
                     </connections>
                 </viewController>
@@ -215,7 +225,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMu-gi-KWk" userLabel="ContainerView">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ytf-uE-ccX">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                    </mapView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ytf-uE-ccX" firstAttribute="top" secondItem="qMu-gi-KWk" secondAttribute="top" id="434-Sn-FLW"/>
+                                    <constraint firstAttribute="bottom" secondItem="ytf-uE-ccX" secondAttribute="bottom" id="O4Y-V6-ifp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ytf-uE-ccX" secondAttribute="trailing" id="kK4-kH-Jjw"/>
+                                    <constraint firstItem="ytf-uE-ccX" firstAttribute="leading" secondItem="qMu-gi-KWk" secondAttribute="leading" id="tb8-gH-eON"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -228,6 +249,9 @@
                         <viewLayoutGuide key="safeArea" id="AWM-0o-5Bb"/>
                     </view>
                     <navigationItem key="navigationItem" id="LuF-PM-DnQ"/>
+                    <connections>
+                        <outlet property="mMapView" destination="ytf-uE-ccX" id="NM8-yF-T5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRu-Nq-Ncp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

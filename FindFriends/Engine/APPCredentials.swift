@@ -11,6 +11,6 @@ import Foundation
 class AppCredentials{
     
     static let  Parse_Application_ID  = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
-    static let  REST_API_Key          = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+    static let  REST_API_Key          = "uWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
 }
 
