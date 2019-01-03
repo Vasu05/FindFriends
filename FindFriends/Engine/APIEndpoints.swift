@@ -16,6 +16,7 @@ class APIEndPoints{
         
         case login
         case getUserLocations
+        case postUserLocation
         
         var stringValue: String {
             switch self {
@@ -23,6 +24,8 @@ class APIEndPoints{
                   return "https://onthemap-api.udacity.com/v1/session"
             case .getUserLocations:
                 return    APIEndPoints.EndPoints.base+"/StudentLocation"
+            case .postUserLocation:
+                return  APIEndPoints.EndPoints.base+"/StudentLocation"
             
             }
         }

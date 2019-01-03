@@ -127,4 +127,23 @@ class Engine {
         }
         
     }
+    class func postUserLocation(dataobj :StudentDetailsRequest ,completion:@escaping(Bool,Error?)->Void){
+        
+        taskForPOSTRequest(url: APIEndPoints.EndPoints.postUserLocation.url, responseType: postLocationResponse.self, body: dataobj)
+        {
+            (response, error) in
+            
+            if let _ = response {
+                completion(true,nil)
+            }
+            else
+            {
+                completion(false,error)
+            }
+            
+            
+        }
+        
+        
+    }
 }

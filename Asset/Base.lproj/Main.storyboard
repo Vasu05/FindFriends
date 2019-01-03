@@ -276,6 +276,148 @@
             </objects>
             <point key="canvasLocation" x="495" y="2165"/>
         </scene>
+        <!--Add LocationVC-->
+        <scene sceneID="HAl-Yd-a6f">
+            <objects>
+                <viewController storyboardIdentifier="AddLocationVC" id="ToS-QX-cNG" customClass="AddLocationVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d8p-Rr-2zd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HB5-FJ-5td" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world" translatesAutoresizingMaskIntoConstraints="NO" id="PNe-8y-Waa">
+                                        <rect key="frame" x="130" y="56" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="gGp-ZF-FlU"/>
+                                            <constraint firstAttribute="height" constant="60" id="y5V-yE-Z0n"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INE-gS-Ww8" userLabel="Locationfield" customClass="CustomTextField" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="132" width="288" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="xrL-D9-iUB"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.google.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbR-Fp-oqX" customClass="CustomTextField" customModule="FindFriends" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="192" width="278" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="3rV-i4-CN4"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDh-pK-Gr5">
+                                        <rect key="frame" x="40" y="262" width="240" height="48"/>
+                                        <color key="backgroundColor" red="0.2662081798" green="0.61216039899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="MG2-XE-guX"/>
+                                            <constraint firstAttribute="height" constant="48" id="yyK-kG-Xgy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <state key="normal" title="Find Location">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findLocationBtnPressed:" destination="ToS-QX-cNG" eventType="touchUpInside" id="cb1-KK-6tj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="cDh-pK-Gr5" firstAttribute="top" secondItem="xbR-Fp-oqX" secondAttribute="bottom" constant="22" id="7sl-ns-wQo"/>
+                                    <constraint firstItem="INE-gS-Ww8" firstAttribute="leading" secondItem="HB5-FJ-5td" secondAttribute="leading" constant="16" id="UAs-kI-qd7"/>
+                                    <constraint firstItem="INE-gS-Ww8" firstAttribute="top" secondItem="PNe-8y-Waa" secondAttribute="bottom" constant="16" id="V3T-db-6J9"/>
+                                    <constraint firstAttribute="trailing" secondItem="INE-gS-Ww8" secondAttribute="trailing" constant="16" id="aKU-F6-Ziu"/>
+                                    <constraint firstItem="PNe-8y-Waa" firstAttribute="top" secondItem="HB5-FJ-5td" secondAttribute="top" constant="56" id="cQM-KA-Pe3"/>
+                                    <constraint firstItem="xbR-Fp-oqX" firstAttribute="top" secondItem="INE-gS-Ww8" secondAttribute="bottom" constant="12" id="hMA-6d-lCY"/>
+                                    <constraint firstItem="cDh-pK-Gr5" firstAttribute="centerX" secondItem="HB5-FJ-5td" secondAttribute="centerX" id="hy5-O4-mVt"/>
+                                    <constraint firstItem="PNe-8y-Waa" firstAttribute="centerX" secondItem="HB5-FJ-5td" secondAttribute="centerX" id="lvZ-sj-B6f"/>
+                                    <constraint firstAttribute="trailing" secondItem="xbR-Fp-oqX" secondAttribute="trailing" constant="26" id="sCB-Cg-9lx"/>
+                                    <constraint firstItem="xbR-Fp-oqX" firstAttribute="leading" secondItem="HB5-FJ-5td" secondAttribute="leading" constant="16" id="uWo-Qv-7ca"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="04H-bN-Myd" firstAttribute="trailing" secondItem="HB5-FJ-5td" secondAttribute="trailing" id="7P4-j9-ncn"/>
+                            <constraint firstItem="HB5-FJ-5td" firstAttribute="top" secondItem="04H-bN-Myd" secondAttribute="top" id="8i0-26-sJD"/>
+                            <constraint firstItem="HB5-FJ-5td" firstAttribute="leading" secondItem="04H-bN-Myd" secondAttribute="leading" id="Vc9-f1-OAR"/>
+                            <constraint firstItem="04H-bN-Myd" firstAttribute="bottom" secondItem="HB5-FJ-5td" secondAttribute="bottom" id="vjw-Tv-mgI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="04H-bN-Myd"/>
+                    </view>
+                    <connections>
+                        <outlet property="mFindLocBtn" destination="cDh-pK-Gr5" id="Vpa-O7-hhd"/>
+                        <outlet property="mLocationLbl" destination="INE-gS-Ww8" id="2tJ-zZ-6Df"/>
+                        <outlet property="mProfileLinkLbl" destination="xbR-Fp-oqX" id="Y18-5m-qhi"/>
+                        <segue destination="VOl-ZV-n1e" kind="show" id="zMj-NW-Nx2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7x-RK-HeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3431" y="1786"/>
+        </scene>
+        <!--Post Location ConfirmationVC-->
+        <scene sceneID="sq4-ix-JfR">
+            <objects>
+                <viewController storyboardIdentifier="PostLocationConfirmationVC" id="VOl-ZV-n1e" customClass="PostLocationConfirmationVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJP-dk-1oM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGc-9a-bo7" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="s7h-gA-Wp8">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                                    </mapView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dg6-uQ-g4P">
+                                        <rect key="frame" x="40" y="468" width="240" height="48"/>
+                                        <color key="backgroundColor" red="0.2662081798" green="0.61216039899999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="15T-HL-PDg"/>
+                                            <constraint firstAttribute="width" constant="240" id="Q5m-VA-7xf"/>
+                                        </constraints>
+                                        <state key="normal" title="Finish">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="s7h-gA-Wp8" firstAttribute="top" secondItem="QGc-9a-bo7" secondAttribute="top" id="H6i-aQ-npr"/>
+                                    <constraint firstAttribute="bottom" secondItem="s7h-gA-Wp8" secondAttribute="bottom" id="kgb-Pw-irw"/>
+                                    <constraint firstItem="s7h-gA-Wp8" firstAttribute="leading" secondItem="QGc-9a-bo7" secondAttribute="leading" id="sYc-jJ-mMy"/>
+                                    <constraint firstAttribute="trailing" secondItem="s7h-gA-Wp8" secondAttribute="trailing" id="wdA-DJ-WqZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="dg6-uQ-g4P" secondAttribute="bottom" constant="32" id="y6G-aN-rqZ"/>
+                                    <constraint firstItem="dg6-uQ-g4P" firstAttribute="centerX" secondItem="QGc-9a-bo7" secondAttribute="centerX" id="zIu-PA-VpL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QGc-9a-bo7" firstAttribute="top" secondItem="lgz-yZ-hzs" secondAttribute="top" id="V33-MU-4Pp"/>
+                            <constraint firstItem="lgz-yZ-hzs" firstAttribute="bottom" secondItem="QGc-9a-bo7" secondAttribute="bottom" id="b6E-na-ScC"/>
+                            <constraint firstItem="lgz-yZ-hzs" firstAttribute="trailing" secondItem="QGc-9a-bo7" secondAttribute="trailing" id="lgs-ln-x4l"/>
+                            <constraint firstItem="QGc-9a-bo7" firstAttribute="leading" secondItem="lgz-yZ-hzs" secondAttribute="leading" id="qy4-fP-Dr9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lgz-yZ-hzs"/>
+                    </view>
+                    <connections>
+                        <outlet property="finishBtn" destination="dg6-uQ-g4P" id="cu4-5H-IcK"/>
+                        <outlet property="mMapView" destination="s7h-gA-Wp8" id="Xpb-5U-D6t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jC6-Wz-y3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4521" y="1779"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AppLogo" width="60" height="60"/>
@@ -283,5 +425,6 @@
         <image name="listnotselected" width="50" height="50"/>
         <image name="marker" width="180" height="180"/>
         <image name="markerNotSelectedicon" width="50" height="50"/>
+        <image name="world" width="25" height="25"/>
     </resources>
 </document>

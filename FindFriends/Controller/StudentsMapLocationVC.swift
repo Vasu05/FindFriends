@@ -48,20 +48,23 @@ class StudentsMapLocationVC: UIViewController {
         let editImage    = UIImage(named: "plus")!
         let reloadImage  = UIImage(named: "reload")!
         
-        let editButton   = UIBarButtonItem(image: editImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapEditButton))
-        let searchButton = UIBarButtonItem(image: reloadImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapSearchButton))
+        let editButton   = UIBarButtonItem(image: editImage,  style: .plain, target: self, action: #selector(didTapAddButton))
+        let reloadBtn = UIBarButtonItem(image: reloadImage,  style: .plain, target: self, action: #selector(didTapReloadButton))
         
-        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapEditButton))
+        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapReloadButton))
         
         self.navigationItem.leftBarButtonItem = logoutBtn
         
-        self.navigationItem.rightBarButtonItems = [editButton,searchButton]
+        self.navigationItem.rightBarButtonItems = [editButton,reloadBtn]
         
     }
-    @objc func didTapEditButton() {
+    @objc func didTapAddButton() {
+        
+        let addLocationVC = storyboard?.instantiateViewController(withIdentifier:"AddLocationVC") as! AddLocationVC
+        navigationController?.pushViewController(addLocationVC, animated: true)
         
     }
-    @objc func didTapSearchButton() {
+    @objc func didTapReloadButton() {
         
     }
     

@@ -25,6 +25,10 @@
 		5737578921DBC782008EE685 /* StudentDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578821DBC782008EE685 /* StudentDetailsVC.swift */; };
 		5737578B21DBCC73008EE685 /* StudentsMapLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */; };
 		5737579021DC8C6D008EE685 /* StudentLocationsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737578F21DC8C6D008EE685 /* StudentLocationsResponse.swift */; };
+		57D8E70821DE818700A55B56 /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70721DE818700A55B56 /* AddLocationVC.swift */; };
+		57D8E70A21DE8E0600A55B56 /* PostLocationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70921DE8E0600A55B56 /* PostLocationConfirmationVC.swift */; };
+		57D8E70C21DE922A00A55B56 /* PostLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70B21DE922A00A55B56 /* PostLocationRequest.swift */; };
+		57D8E70F21DE92C300A55B56 /* PostLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70E21DE92C300A55B56 /* PostLocationResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		5737578821DBC782008EE685 /* StudentDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailsVC.swift; sourceTree = "<group>"; };
 		5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsMapLocationVC.swift; sourceTree = "<group>"; };
 		5737578F21DC8C6D008EE685 /* StudentLocationsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationsResponse.swift; sourceTree = "<group>"; };
+		57D8E70721DE818700A55B56 /* AddLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
+		57D8E70921DE8E0600A55B56 /* PostLocationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationConfirmationVC.swift; sourceTree = "<group>"; };
+		57D8E70B21DE922A00A55B56 /* PostLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationRequest.swift; sourceTree = "<group>"; };
+		57D8E70E21DE92C300A55B56 /* PostLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,8 @@
 				5737578621DB5D4C008EE685 /* HomePageVC.swift */,
 				5737578821DBC782008EE685 /* StudentDetailsVC.swift */,
 				5737578A21DBCC73008EE685 /* StudentsMapLocationVC.swift */,
+				57D8E70721DE818700A55B56 /* AddLocationVC.swift */,
+				57D8E70921DE8E0600A55B56 /* PostLocationConfirmationVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				5737577B21D9CDE7008EE685 /* LoginRequest.swift */,
+				57D8E70B21DE922A00A55B56 /* PostLocationRequest.swift */,
 			);
 			path = RequestModel;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 		5737577D21D9CE46008EE685 /* ResponseModel */ = {
 			isa = PBXGroup;
 			children = (
+				57D8E70D21DE92A800A55B56 /* PostLocationResponse */,
 				5737578E21DC8C47008EE685 /* StudentLocationsResponse */,
 				5737578D21DC8C35008EE685 /* LoginResponse */,
 				5737578121DB45A8008EE685 /* CustomErrorHandle */,
@@ -189,6 +201,14 @@
 				5737578F21DC8C6D008EE685 /* StudentLocationsResponse.swift */,
 			);
 			path = StudentLocationsResponse;
+			sourceTree = "<group>";
+		};
+		57D8E70D21DE92A800A55B56 /* PostLocationResponse */ = {
+			isa = PBXGroup;
+			children = (
+				57D8E70E21DE92C300A55B56 /* PostLocationResponse.swift */,
+			);
+			path = PostLocationResponse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +286,15 @@
 				5737579021DC8C6D008EE685 /* StudentLocationsResponse.swift in Sources */,
 				5737578B21DBCC73008EE685 /* StudentsMapLocationVC.swift in Sources */,
 				5737578721DB5D4C008EE685 /* HomePageVC.swift in Sources */,
+				57D8E70821DE818700A55B56 /* AddLocationVC.swift in Sources */,
 				5737577921D9CA07008EE685 /* APPCredentials.swift in Sources */,
 				5737577721D9C949008EE685 /* APIEndpoints.swift in Sources */,
 				5733F1FE21DD25970072DEBF /* StudentDetailsTblCell.swift in Sources */,
+				57D8E70C21DE922A00A55B56 /* PostLocationRequest.swift in Sources */,
 				5737577221D919A5008EE685 /* CustomTextField.swift in Sources */,
+				57D8E70A21DE8E0600A55B56 /* PostLocationConfirmationVC.swift in Sources */,
 				5737575E21D88835008EE685 /* LogInController.swift in Sources */,
+				57D8E70F21DE92C300A55B56 /* PostLocationResponse.swift in Sources */,
 				5737575C21D88835008EE685 /* AppDelegate.swift in Sources */,
 				5737578321DB45CE008EE685 /* CustomError.swift in Sources */,
 				5737577C21D9CDE7008EE685 /* LoginRequest.swift in Sources */,
