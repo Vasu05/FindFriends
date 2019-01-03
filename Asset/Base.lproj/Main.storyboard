@@ -125,7 +125,7 @@
             </objects>
             <point key="canvasLocation" x="-1131" y="1194"/>
         </scene>
-        <!--Student DetailsVC-->
+        <!--On The Map-->
         <scene sceneID="ChH-Ml-tBN">
             <objects>
                 <viewController id="669-IR-xQz" customClass="StudentDetailsVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
@@ -168,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="frA-h7-1Xe"/>
                     </view>
-                    <navigationItem key="navigationItem" id="4TM-Vn-lfM"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="4TM-Vn-lfM"/>
                     <connections>
                         <outlet property="mActivityIndicator" destination="ZOd-ez-D5H" id="lnB-fb-VFv"/>
                         <outlet property="mTableView" destination="1E1-jj-6Cc" id="vMT-UB-vhe"/>
@@ -188,18 +188,18 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="83E-kn-8LS" kind="relationship" relationship="viewControllers" id="q9d-PL-zto"/>
                         <segue destination="IXX-kA-8JZ" kind="relationship" relationship="viewControllers" id="asi-o1-0ku"/>
+                        <segue destination="83E-kn-8LS" kind="relationship" relationship="viewControllers" id="q9d-PL-zto"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DtX-iF-MVH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64" y="1194"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--On The Map-->
         <scene sceneID="TQc-e6-jCi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="83E-kn-8LS" sceneMemberID="viewController">
+                <navigationController title="On The Map" automaticallyAdjustsScrollViewInsets="NO" id="83E-kn-8LS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="listnotselected" selectedImage="list" id="1Lp-5S-BiP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ySp-mz-BKs">
@@ -215,7 +215,7 @@
             </objects>
             <point key="canvasLocation" x="1200" y="1193.661971830986"/>
         </scene>
-        <!--Students Map LocationVC-->
+        <!--On The Map-->
         <scene sceneID="cTQ-Rd-IUF">
             <objects>
                 <viewController storyboardIdentifier="StudentsMapLocationVC" id="WCc-1t-fUc" customClass="StudentsMapLocationVC" customModule="FindFriends" customModuleProvider="target" sceneMemberID="viewController">
@@ -248,7 +248,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AWM-0o-5Bb"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LuF-PM-DnQ"/>
+                    <navigationItem key="navigationItem" title="On The Map" id="LuF-PM-DnQ"/>
                     <connections>
                         <outlet property="mMapView" destination="ytf-uE-ccX" id="NM8-yF-T5X"/>
                     </connections>
@@ -257,11 +257,11 @@
             </objects>
             <point key="canvasLocation" x="1952" y="2164"/>
         </scene>
-        <!--Item-->
+        <!--On The Map-->
         <scene sceneID="GRy-gG-1pB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IXX-kA-8JZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="markerNotSelectedicon" selectedImage="marker" id="ckY-9p-Ali"/>
+                <navigationController title="On The Map" automaticallyAdjustsScrollViewInsets="NO" id="IXX-kA-8JZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="markerNotSelectedicon" selectedImage="marker" id="ckY-9p-Ali"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Id-xH-naY">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>

@@ -14,7 +14,7 @@ class StudentDetailsVC : UIViewController{
     @IBOutlet weak var mTableView: UITableView!
     @IBOutlet weak var mActivityIndicator: UIActivityIndicatorView!
     
-    var mDataSource : [StudentDetailsResponse]?
+    var mTableDataSource : [StudentDetailsResponse]?
     let cell_Identifier = "StudentDetailsTblCell"
    
     
@@ -24,6 +24,32 @@ class StudentDetailsVC : UIViewController{
         regiterNib()
         fetchData()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
+        
+        
+        let editImage    = UIImage(named: "plus")!
+        let reloadImage  = UIImage(named: "reload")!
+        
+        let editButton   = UIBarButtonItem(image: editImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapEditButton))
+        let searchButton = UIBarButtonItem(image: reloadImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapSearchButton))
+        
+        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapEditButton))
+        
+        self.navigationItem.leftBarButtonItem = logoutBtn
+        
+        self.navigationItem.rightBarButtonItems = [editButton,searchButton]
+        
+    }
+    @objc func didTapEditButton() {
+        
+    }
+    @objc func didTapSearchButton() {
+        
     }
     
     func configureUI(){
@@ -38,16 +64,23 @@ class StudentDetailsVC : UIViewController{
     }
     
     func fetchData(){
-        showHideloader(show: true)
-        Engine.getUsersLocation { (studentData, error) in
-            self.showHideloader(show: false)
-            guard studentData != nil else{
-                print("User locations error : \(error?.localizedDescription ?? "errorrr")")
-                return
+        
+        if Engine.mDataSource == nil{
+            self.showHideloader(show: true)
+            Engine.getUsersLocation { (studentData, error) in
+                self.showHideloader(show: false)
+                guard studentData != nil else{
+                    print("User locations error : \(error?.localizedDescription ?? "errorrr")")
+                    return
+                }
+                self.mTableDataSource = studentData?.results
+                self.mTableView.reloadData()
             }
-            self.mDataSource = studentData?.results
-            self.mTableView.reloadData()
         }
+        else{
+            mTableDataSource = Engine.mDataSource
+        }
+        
     }
     
     func showHideloader(show :Bool){
@@ -69,7 +102,7 @@ extension StudentDetailsVC : UITableViewDelegate,UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cell_Identifier) as? StudentDetailsTblCell
         
-        let data = mDataSource?[indexPath.row]
+        let data = mTableDataSource?[indexPath.row]
         
         if let data = data {
            cell?.configureUIwith(name: data.firstName ?? "", profileLink: data.mediaURL ?? "")
@@ -78,7 +111,7 @@ extension StudentDetailsVC : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mDataSource?.count ?? 0
+        return mTableDataSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

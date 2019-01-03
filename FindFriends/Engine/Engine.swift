@@ -10,6 +10,8 @@ import Foundation
 
 class Engine {
     
+   static var mDataSource : [StudentDetailsResponse]?
+    
     class func taskForGETRequest<ResponseType :Decodable>(url : URL,responseType : ResponseType.Type ,completion: @escaping (ResponseType? ,Error? ) -> Void){
         
         
@@ -114,6 +116,7 @@ class Engine {
             
             if let response = data {
                 
+                mDataSource = response.results
                 completion(response ,nil)
             }
             else{
