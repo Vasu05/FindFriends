@@ -14,6 +14,7 @@ class PostLocationConfirmationVC: UIViewController {
     @IBOutlet weak var mMapView: MKMapView!
     @IBOutlet weak var finishBtn: UIButton!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var localSearchResponse:MKLocalSearch.Response?
     var searchlocation:String?
@@ -25,6 +26,7 @@ class PostLocationConfirmationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        showHideloader(show: false)
     }
     
     func configureUI(){
@@ -44,10 +46,12 @@ class PostLocationConfirmationVC: UIViewController {
     @IBAction func finishBtnPressed(_ sender: Any) {
         
         let dataobj = StudentDetailsRequest.init(uniqueKey: "2342", firstName: "Testing", lastName: "Account", mapString: searchlocation, mediaURL: mediaURL, latitude:localSearchResponse!.boundingRegion.center.latitude , longitude: localSearchResponse!.boundingRegion.center.longitude)
+      
+        showHideloader(show: true)
         
         Engine.postUserLocation(dataobj: dataobj) {
             (success, error) in
-            
+            self.showHideloader(show: false)
             if success{
                 print("Successfully posted")
                 
@@ -63,6 +67,17 @@ class PostLocationConfirmationVC: UIViewController {
             }
         }
         
+    }
+    func showHideloader(show :Bool){
+        
+        if show {
+            activityIndicator.isHidden =  false
+            activityIndicator.startAnimating()
+        }
+        else{
+            activityIndicator.isHidden =  true
+            activityIndicator.stopAnimating()
+        }
     }
     
 }

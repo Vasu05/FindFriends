@@ -14,6 +14,7 @@ class StudentsMapLocationVC: UIViewController {
     @IBOutlet weak var mMapView: MKMapView!
     var mAnnotation : [MKPointAnnotation] = []
     var mTableDataSource : [StudentDetailsResponse] = []
+    var reloadBtnTapped:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,7 @@ class StudentsMapLocationVC: UIViewController {
     
     
     func fetchData()  {
-        if Engine.mDataSource == nil{
+        if Engine.mDataSource == nil || reloadBtnTapped{
             Engine.getUsersLocation { (studentData, error) in
                 
                 guard studentData != nil else{
@@ -110,6 +111,7 @@ class StudentsMapLocationVC: UIViewController {
     }
     
     @objc func didTapReloadButton() {
+        reloadBtnTapped = true
         fetchData()
     }
 

@@ -56,11 +56,7 @@ class LogInController: UIViewController {
         }
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "HomePageVC"{
-//            
-//        }
-//    }
+
     
     func validation() -> Bool {
         var shouldReturn : Bool = true

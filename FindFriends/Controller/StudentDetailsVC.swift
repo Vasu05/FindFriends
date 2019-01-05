@@ -16,6 +16,7 @@ class StudentDetailsVC : UIViewController{
     
     var mTableDataSource : [StudentDetailsResponse]?
     let cell_Identifier = "StudentDetailsTblCell"
+    var reloadBtnTapped:Bool = false
    
     
     override func viewDidLoad() {
@@ -59,7 +60,7 @@ class StudentDetailsVC : UIViewController{
     
     func fetchData(){
         
-        if Engine.mDataSource == nil{
+        if Engine.mDataSource == nil || reloadBtnTapped{
             self.showHideloader(show: true)
             Engine.getUsersLocation { (studentData, error) in
                 self.showHideloader(show: false)
@@ -102,7 +103,7 @@ class StudentDetailsVC : UIViewController{
         navigationController?.pushViewController(login, animated: true)
     }
     @objc func didTapReloadButton() {
-        
+        reloadBtnTapped = true
         fetchData()
     }
     
