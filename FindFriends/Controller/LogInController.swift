@@ -22,6 +22,11 @@ class LogInController: UIViewController {
         showHideloader(show: false)
         // Do any additional setup after loading the view, typically from a nib.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     func configureUI()  {
         mPasswordField.isSecureTextEntry = true
@@ -41,7 +46,8 @@ class LogInController: UIViewController {
                 if success! {
                     print("login successfully")
                     
-                    self.performSegue(withIdentifier: "HomePageVC", sender: self)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier:"HomePageVC") as! HomePageVC
+                    self.navigationController?.pushViewController(vc, animated: true)
                 }
                 else{
                      self.showLoginFailure(message: Error!.localizedDescription)
@@ -50,11 +56,11 @@ class LogInController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomePageVC"{
-            
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "HomePageVC"{
+//            
+//        }
+//    }
     
     func validation() -> Bool {
         var shouldReturn : Bool = true
@@ -76,9 +82,11 @@ class LogInController: UIViewController {
     }
     
     func showLoginFailure(message: String) {
+      
         let alertVC = UIAlertController(title: "Login Failed", message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        show(alertVC, sender: nil)
+        self.present(alertVC, animated: true, completion: nil)
+
     }
     
     func showHideloader(show :Bool){

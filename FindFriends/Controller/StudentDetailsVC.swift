@@ -38,23 +38,14 @@ class StudentDetailsVC : UIViewController{
         let editButton   = UIBarButtonItem(image: editImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapAddButton))
         let searchButton = UIBarButtonItem(image: reloadImage,  style: .plain, target: self, action: #selector(StudentDetailsVC.didTapReloadButton))
         
-        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapReloadButton))
+        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogoutButton))
         
         self.navigationItem.leftBarButtonItem = logoutBtn
         
         self.navigationItem.rightBarButtonItems = [editButton,searchButton]
         
     }
-    @objc func didTapAddButton() {
-        
-        let addLocationVC = storyboard?.instantiateViewController(withIdentifier:"AddLocationVC") as! AddLocationVC
-        navigationController?.pushViewController(addLocationVC, animated: true)
-        
-    }
-    @objc func didTapReloadButton() {
-        
-    }
-    
+   
     func configureUI(){
         showHideloader(show: false)
         mTableView.delegate = self
@@ -97,6 +88,25 @@ class StudentDetailsVC : UIViewController{
             mActivityIndicator.stopAnimating()
         }
     }
+    
+    
+    @objc func didTapAddButton() {
+        
+        let addLocationVC = storyboard?.instantiateViewController(withIdentifier:"AddLocationVC") as! AddLocationVC
+        navigationController?.pushViewController(addLocationVC, animated: true)
+        
+    }
+    @objc func didTapLogoutButton() {
+        let login = storyboard?.instantiateViewController(withIdentifier:"LogInController") as! LogInController
+        
+        navigationController?.pushViewController(login, animated: true)
+    }
+    @objc func didTapReloadButton() {
+        
+        fetchData()
+    }
+    
+    
 }
 
 extension StudentDetailsVC : UITableViewDelegate,UITableViewDataSource{

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/Engine/Engine.swift"
-            timestampString = "568320188.4492739"
+            timestampString = "568362794.5228699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -57,24 +57,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FindFriends/Controller/StudentDetailsVC.swift"
-            timestampString = "568273274.863809"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FindFriends/Engine/Engine.swift"
-            timestampString = "568320188.449888"
+            timestampString = "568362794.523044"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "115"
@@ -90,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/Engine/Engine.swift"
-            timestampString = "568320188.450255"
+            timestampString = "568362794.523203"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -105,72 +89,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FindFriends/Controller/StudentDetailsVC.swift"
-            timestampString = "568273274.864067"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "fetchData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FindFriends.StudentDetailsVC.fetchData() -&gt; ()"
-                  moduleName = "FindFriends"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vasu/Desktop/Nanodegree/FindFriends/FindFriends/Controller/StudentDetailsVC.swift"
-                  timestampString = "568320188.68068"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
-                  offsetFromSymbolStart = "244">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;FindFriends.StudentLocationsResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FindFriends.StudentDetailsVC.fetchData() -&gt; ()"
-                  moduleName = "FindFriends"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vasu/Desktop/Nanodegree/FindFriends/FindFriends/Controller/StudentDetailsVC.swift"
-                  timestampString = "568320188.683961"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "58">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FindFriends/Controller/StudentDetailsVC.swift"
-            timestampString = "568273274.864148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "didTapAddButton()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "FindFriends/Controller/AddLocationVC.swift"
-            timestampString = "568320188.45064"
+            timestampString = "568362794.523347"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -186,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/Controller/AddLocationVC.swift"
-            timestampString = "568320188.451072"
+            timestampString = "568362794.52349"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -202,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/Controller/PostLocationConfirmationVC.swift"
-            timestampString = "568320188.451422"
+            timestampString = "568362794.523629"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "finishBtnPressed(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,13 +138,77 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FindFriends/Engine/Engine.swift"
-            timestampString = "568320188.451901"
+            timestampString = "568362794.524529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
             endingLineNumber = "131"
             landmarkName = "postUserLocation(dataobj:completion:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindFriends/Controller/PostLocationConfirmationVC.swift"
+            timestampString = "568362794.524659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "finishBtnPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindFriends/Controller/LogInController.swift"
+            timestampString = "568362794.525479"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "loginBtnPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FindFriends.LogInController.loginBtnPressed(Any) -&gt; ()"
+                  moduleName = "FindFriends"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vasu/Desktop/Nanodegree/FindFriends/FindFriends/Controller/LogInController.swift"
+                  timestampString = "568362220.164649"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "400">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Bool&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FindFriends.LogInController.loginBtnPressed(Any) -&gt; ()"
+                  moduleName = "FindFriends"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vasu/Desktop/Nanodegree/FindFriends/FindFriends/Controller/LogInController.swift"
+                  timestampString = "568362220.1680191"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1340">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -37,6 +37,7 @@ class PostLocationConfirmationVC: UIViewController {
         pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
         mMapView.centerCoordinate = self.pointAnnotation.coordinate
         mMapView.addAnnotation(pinAnnotationView.annotation!)
+        self.navigationController?.navigationBar.topItem?.title = "Add Location"
     }
 
     
@@ -51,7 +52,7 @@ class PostLocationConfirmationVC: UIViewController {
                 print("Successfully posted")
                 
                 for controller in self.navigationController!.viewControllers as Array {
-                    if controller.isKind(of: HomePageVC.self) {
+                    if controller.isKind(of: StudentsMapLocationVC.self) || controller.isKind(of: StudentDetailsVC.self) {
                         _ =  self.navigationController!.popToViewController(controller, animated: true)
                         break
                     }

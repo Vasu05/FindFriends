@@ -19,23 +19,8 @@ class StudentsMapLocationVC: UIViewController {
         super.viewDidLoad()
         
         mMapView.delegate = self
-        
-        if Engine.mDataSource == nil{
-            Engine.getUsersLocation { (studentData, error) in
-               
-                guard studentData != nil else{
-                    print("User locations error : \(error?.localizedDescription ?? "errorrr")")
-                    return
-                }
-                self.mTableDataSource = Engine.mDataSource!
-                self.configureDataSource()
-                
-            }
-        }
-        else{
-            mTableDataSource = Engine.mDataSource!
-            configureDataSource()
-        }
+        fetchData()
+       
         // Do any additional setup after loading the view.
     }
     
@@ -51,21 +36,32 @@ class StudentsMapLocationVC: UIViewController {
         let editButton   = UIBarButtonItem(image: editImage,  style: .plain, target: self, action: #selector(didTapAddButton))
         let reloadBtn = UIBarButtonItem(image: reloadImage,  style: .plain, target: self, action: #selector(didTapReloadButton))
         
-        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapReloadButton))
+        let logoutBtn = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogoutButton))
         
         self.navigationItem.leftBarButtonItem = logoutBtn
         
         self.navigationItem.rightBarButtonItems = [editButton,reloadBtn]
         
     }
-    @objc func didTapAddButton() {
-        
-        let addLocationVC = storyboard?.instantiateViewController(withIdentifier:"AddLocationVC") as! AddLocationVC
-        navigationController?.pushViewController(addLocationVC, animated: true)
-        
-    }
-    @objc func didTapReloadButton() {
-        
+    
+    
+    func fetchData()  {
+        if Engine.mDataSource == nil{
+            Engine.getUsersLocation { (studentData, error) in
+                
+                guard studentData != nil else{
+                    print("User locations error : \(error?.localizedDescription ?? "errorrr")")
+                    return
+                }
+                self.mTableDataSource = Engine.mDataSource!
+                self.configureDataSource()
+                
+            }
+        }
+        else{
+            mTableDataSource = Engine.mDataSource!
+            configureDataSource()
+        }
     }
     
     
@@ -98,6 +94,23 @@ class StudentsMapLocationVC: UIViewController {
             
         }
         mMapView.addAnnotations(mAnnotation)
+    }
+    
+    @objc func didTapAddButton() {
+        
+        let addLocationVC = storyboard?.instantiateViewController(withIdentifier:"AddLocationVC") as! AddLocationVC
+        navigationController?.pushViewController(addLocationVC, animated: true)
+        
+    }
+    
+    @objc func didTapLogoutButton() {
+        let login = storyboard?.instantiateViewController(withIdentifier:"LogInController") as! LogInController
+        
+        navigationController?.pushViewController(login, animated: true)
+    }
+    
+    @objc func didTapReloadButton() {
+        fetchData()
     }
 
 
