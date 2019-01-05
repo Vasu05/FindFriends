@@ -145,8 +145,21 @@ extension StudentsMapLocationVC : MKMapViewDelegate{
         if control == view.rightCalloutAccessoryView {
             let app = UIApplication.shared
             if let toOpen = view.annotation?.subtitle! {
-                app.openURL(URL(string: toOpen)!)
+                let url = URL(string: toOpen)
+                
+                guard let urlvalue = url else{
+                    showFailure(message: "URL Missing...")
+                    return
+                }
+                app.openURL(urlvalue)
             }
         }
+    }
+    func showFailure(message: String) {
+        
+        let alertVC = UIAlertController(title: "Map Locations", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+        
     }
 }

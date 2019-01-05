@@ -96,5 +96,18 @@ class LogInController: UIViewController {
             activityIndicator.stopAnimating()
         }
     }
+    
+    @IBAction func SignupBtnPressed(_ sender: Any) {
+        
+         let url = APIEndPoints.EndPoints.signup.url 
+          
+        
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
 }
 

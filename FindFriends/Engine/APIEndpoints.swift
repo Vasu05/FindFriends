@@ -17,6 +17,7 @@ class APIEndPoints{
         case login
         case getUserLocations
         case postUserLocation
+        case signup
         
         var stringValue: String {
             switch self {
@@ -26,6 +27,9 @@ class APIEndPoints{
                 return    APIEndPoints.EndPoints.base+"/StudentLocation"
             case .postUserLocation:
                 return  APIEndPoints.EndPoints.base+"/StudentLocation"
+                
+            case .signup:
+                return "https://auth.udacity.com/sign-up"
             
             }
         }

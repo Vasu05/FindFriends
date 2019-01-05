@@ -89,6 +89,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="SignupBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O7-l8-fFu"/>
+                                        </connections>
                                     </button>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pE7-36-4xP">
                                         <rect key="frame" x="145" y="237" width="30" height="30"/>
