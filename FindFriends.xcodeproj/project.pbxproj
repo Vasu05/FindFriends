@@ -14,7 +14,6 @@
 		5737576121D88835008EE685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5737575F21D88835008EE685 /* Main.storyboard */; };
 		5737576321D88836008EE685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5737576221D88836008EE685 /* Assets.xcassets */; };
 		5737576621D88836008EE685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5737576421D88836008EE685 /* LaunchScreen.storyboard */; };
-		5737577221D919A5008EE685 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577121D919A5008EE685 /* CustomTextField.swift */; };
 		5737577521D9C936008EE685 /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577421D9C936008EE685 /* Engine.swift */; };
 		5737577721D9C949008EE685 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577621D9C949008EE685 /* APIEndpoints.swift */; };
 		5737577921D9CA07008EE685 /* APPCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5737577821D9CA07008EE685 /* APPCredentials.swift */; };
@@ -29,6 +28,7 @@
 		57D8E70A21DE8E0600A55B56 /* PostLocationConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70921DE8E0600A55B56 /* PostLocationConfirmationVC.swift */; };
 		57D8E70C21DE922A00A55B56 /* PostLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70B21DE922A00A55B56 /* PostLocationRequest.swift */; };
 		57D8E70F21DE92C300A55B56 /* PostLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D8E70E21DE92C300A55B56 /* PostLocationResponse.swift */; };
+		57FD08A721E0909000390AAE /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FD08A621E0909000390AAE /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +41,6 @@
 		5737576221D88836008EE685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5737576521D88836008EE685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5737576721D88836008EE685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5737577121D919A5008EE685 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = ../../../../CustomTextField.swift; sourceTree = "<group>"; };
 		5737577421D9C936008EE685 /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		5737577621D9C949008EE685 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
 		5737577821D9CA07008EE685 /* APPCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPCredentials.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		57D8E70921DE8E0600A55B56 /* PostLocationConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationConfirmationVC.swift; sourceTree = "<group>"; };
 		57D8E70B21DE922A00A55B56 /* PostLocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationRequest.swift; sourceTree = "<group>"; };
 		57D8E70E21DE92C300A55B56 /* PostLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostLocationResponse.swift; sourceTree = "<group>"; };
+		57FD08A621E0909000390AAE /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5733F1FB21DD25630072DEBF /* StudentDetailsTblCell */,
-				5737577121D919A5008EE685 /* CustomTextField.swift */,
+				57FD08A621E0909000390AAE /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 				5737577721D9C949008EE685 /* APIEndpoints.swift in Sources */,
 				5733F1FE21DD25970072DEBF /* StudentDetailsTblCell.swift in Sources */,
 				57D8E70C21DE922A00A55B56 /* PostLocationRequest.swift in Sources */,
-				5737577221D919A5008EE685 /* CustomTextField.swift in Sources */,
+				57FD08A721E0909000390AAE /* CustomTextField.swift in Sources */,
 				57D8E70A21DE8E0600A55B56 /* PostLocationConfirmationVC.swift in Sources */,
 				5737575E21D88835008EE685 /* LogInController.swift in Sources */,
 				57D8E70F21DE92C300A55B56 /* PostLocationResponse.swift in Sources */,
