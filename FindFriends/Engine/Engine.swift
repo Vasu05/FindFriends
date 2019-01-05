@@ -27,9 +27,7 @@ class Engine {
                 }
                 return
             }
-//            let range = Range(5..<data.count)
-//            let newData = data.subdata(in: range)
-//            print(String(data: newData, encoding: .utf8)!)
+
             let decoder = JSONDecoder()
             
             do{
@@ -54,7 +52,7 @@ class Engine {
         task.resume()
     }
     
-    class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, body: RequestType, completion: @escaping (ResponseType?, Error?) -> Void) {
+    class func taskForPOSTRequest<RequestType: Encodable, ResponseType: Decodable>(url: URL, responseType: ResponseType.Type, body: RequestType,loginFlag:Bool = true ,completion: @escaping (ResponseType?, Error?) -> Void) {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = try! JSONEncoder().encode(body)
@@ -67,12 +65,13 @@ class Engine {
                 return
             }
             
+            
             let range = Range(5..<data.count)
             let newData = data.subdata(in: range)
             print(String(data: newData, encoding: .utf8)!)
             let decoder = JSONDecoder()
             do {
-                let responseObject = try decoder.decode(ResponseType.self, from: newData)
+                let responseObject = try decoder.decode(ResponseType.self, from: loginFlag ? newData : data)
                 DispatchQueue.main.async {
                     completion(responseObject, nil)
                 }
@@ -129,7 +128,7 @@ class Engine {
     }
     class func postUserLocation(dataobj :StudentDetailsRequest ,completion:@escaping(Bool,Error?)->Void){
         
-        taskForPOSTRequest(url: APIEndPoints.EndPoints.postUserLocation.url, responseType: postLocationResponse.self, body: dataobj)
+        taskForPOSTRequest(url: APIEndPoints.EndPoints.postUserLocation.url,responseType: postLocationResponse.self, body: dataobj,loginFlag: false)
         {
             (response, error) in
             

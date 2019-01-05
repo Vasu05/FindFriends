@@ -356,7 +356,6 @@
                         <outlet property="mFindLocBtn" destination="cDh-pK-Gr5" id="Vpa-O7-hhd"/>
                         <outlet property="mLocationLbl" destination="INE-gS-Ww8" id="2tJ-zZ-6Df"/>
                         <outlet property="mProfileLinkLbl" destination="xbR-Fp-oqX" id="Y18-5m-qhi"/>
-                        <segue destination="VOl-ZV-n1e" kind="show" id="zMj-NW-Nx2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m7x-RK-HeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -387,6 +386,9 @@
                                         <state key="normal" title="Finish">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="finishBtnPressed:" destination="VOl-ZV-n1e" eventType="touchUpInside" id="hha-o3-oEw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

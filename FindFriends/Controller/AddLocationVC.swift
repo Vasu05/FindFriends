@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import MapKit
 
 class AddLocationVC: UIViewController {
 
     @IBOutlet weak var mLocationLbl: UITextField!
     @IBOutlet weak var mProfileLinkLbl: UITextField!
     @IBOutlet weak var mFindLocBtn: UIButton!
+    
+    var localSearchRequest:MKLocalSearch.Request!
+    var localSearch:MKLocalSearch!
+    var localSearchResponse:MKLocalSearch.Response!
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,19 +45,42 @@ class AddLocationVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func showLoginFailure(message: String) {
+    func showFailure(message: String) {
         let alertVC = UIAlertController(title: "Location Adding failed", message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        show(alertVC, sender: nil)
+        self.present(alertVC, animated: true, completion: nil)
     }
 
     @IBAction func findLocationBtnPressed(_ sender: Any) {
         
-        guard mLocationLbl.text!.count<2 || mProfileLinkLbl.text!.count < 2 else {
-            showLoginFailure(message: "Enter correct Details")
+        guard mLocationLbl.text!.count>2 && mProfileLinkLbl.text!.count > 2 else {
+            showFailure(message: "Enter correct Details")
             return
         }
+        let locationStr =  mLocationLbl.text
         
+        localSearchRequest = MKLocalSearch.Request()
+        localSearchRequest.naturalLanguageQuery = locationStr
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.start { (localSearchResponse, error) -> Void in
+            
+            guard (localSearchResponse != nil) else{
+                self.showFailure(message: "Place Not Found")
+                return
+            }
+            
+            
+            
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostLocationConfirmationVC") as! PostLocationConfirmationVC
+            vc.localSearchResponse = localSearchResponse
+            vc.searchlocation = locationStr
+            vc.mediaURL = self.mProfileLinkLbl.text!
+            self.navigationController?.pushViewController(vc, animated: true)
+           
+        }
+        
+        
+    
         
     }
     /*
@@ -64,5 +92,7 @@ class AddLocationVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

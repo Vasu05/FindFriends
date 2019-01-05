@@ -15,25 +15,53 @@ class PostLocationConfirmationVC: UIViewController {
     @IBOutlet weak var finishBtn: UIButton!
     
     
+    var localSearchResponse:MKLocalSearch.Response?
+    var searchlocation:String?
+    var mediaURL:String?
+    
+    var pointAnnotation : MKPointAnnotation!
+    var pinAnnotationView:MKPinAnnotationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureUI()
     }
     
     func configureUI(){
         finishBtn.layer.cornerRadius = 4.0
+          pointAnnotation = MKPointAnnotation()
+         pointAnnotation.title = searchlocation ?? ""  //mapItems[0].name ?? "gulabi"
+          pointAnnotation.coordinate = CLLocationCoordinate2D(latitude:localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+        
+        
+        pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+        mMapView.centerCoordinate = self.pointAnnotation.coordinate
+        mMapView.addAnnotation(pinAnnotationView.annotation!)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func finishBtnPressed(_ sender: Any) {
+        
+        let dataobj = StudentDetailsRequest.init(uniqueKey: "2342", firstName: "Testing", lastName: "Account", mapString: searchlocation, mediaURL: mediaURL, latitude:localSearchResponse!.boundingRegion.center.latitude , longitude: localSearchResponse!.boundingRegion.center.longitude)
+        
+        Engine.postUserLocation(dataobj: dataobj) {
+            (success, error) in
+            
+            if success{
+                print("Successfully posted")
+                
+                for controller in self.navigationController!.viewControllers as Array {
+                    if controller.isKind(of: HomePageVC.self) {
+                        _ =  self.navigationController!.popToViewController(controller, animated: true)
+                        break
+                    }
+                }
+            }
+            else{
+                print("Error Occured \(error!.localizedDescription)")
+            }
+        }
+        
     }
-    */
-
+    
 }
