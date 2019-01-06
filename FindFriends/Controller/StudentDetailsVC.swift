@@ -65,6 +65,7 @@ class StudentDetailsVC : UIViewController{
             Engine.getUsersLocation { (studentData, error) in
                 self.showHideloader(show: false)
                 guard studentData != nil else{
+                    self.showFailure(message: error!.localizedDescription)
                     print("User locations error : \(error?.localizedDescription ?? "errorrr")")
                     return
                 }
@@ -107,7 +108,14 @@ class StudentDetailsVC : UIViewController{
         fetchData()
     }
     
-    
+    func showFailure(message: String) {
+        
+        let alertVC = UIAlertController(title: "Map Locations", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+        
+    }
+
 }
 
 extension StudentDetailsVC : UITableViewDelegate,UITableViewDataSource{
@@ -130,6 +138,23 @@ extension StudentDetailsVC : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("row selected call .....")
+        
+        let studentDetails = mTableDataSource?[indexPath.row]
+        
+        let url = URL(string: studentDetails?.mediaURL ?? "")
+        
+        guard let urlvalue = url else{
+            showFailure(message: "URL Missing...")
+            return
+        }
+        let app = UIApplication.shared
+        if app.canOpenURL(urlvalue){
+            app.openURL(urlvalue)
+        }
+        else{
+           showFailure(message: "Invalid URL...")
+        }
+       
     }
     
 }

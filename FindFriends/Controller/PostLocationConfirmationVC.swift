@@ -63,6 +63,7 @@ class PostLocationConfirmationVC: UIViewController {
                 }
             }
             else{
+                self.showFailure(message: error!.localizedDescription)
                 print("Error Occured \(error!.localizedDescription)")
             }
         }
@@ -78,6 +79,14 @@ class PostLocationConfirmationVC: UIViewController {
             activityIndicator.isHidden =  true
             activityIndicator.stopAnimating()
         }
+    }
+    
+    func showFailure(message: String) {
+        
+        let alertVC = UIAlertController(title: "Add Locations", message: message, preferredStyle: .alert)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
+        
     }
     
 }

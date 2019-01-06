@@ -364,17 +364,29 @@
                                     <constraint firstItem="xbR-Fp-oqX" firstAttribute="leading" secondItem="HB5-FJ-5td" secondAttribute="leading" constant="16" id="uWo-Qv-7ca"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="90C-SS-8IN">
+                                <rect key="frame" x="145" y="269" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MR3-OJ-Kuf"/>
+                                    <constraint firstAttribute="width" constant="30" id="h1G-3a-knC"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="04H-bN-Myd" firstAttribute="trailing" secondItem="HB5-FJ-5td" secondAttribute="trailing" id="7P4-j9-ncn"/>
                             <constraint firstItem="HB5-FJ-5td" firstAttribute="top" secondItem="04H-bN-Myd" secondAttribute="top" id="8i0-26-sJD"/>
+                            <constraint firstItem="90C-SS-8IN" firstAttribute="centerY" secondItem="d8p-Rr-2zd" secondAttribute="centerY" id="OCv-Mr-KdJ"/>
                             <constraint firstItem="HB5-FJ-5td" firstAttribute="leading" secondItem="04H-bN-Myd" secondAttribute="leading" id="Vc9-f1-OAR"/>
+                            <constraint firstItem="90C-SS-8IN" firstAttribute="centerX" secondItem="d8p-Rr-2zd" secondAttribute="centerX" id="t56-y8-x4S"/>
                             <constraint firstItem="04H-bN-Myd" firstAttribute="bottom" secondItem="HB5-FJ-5td" secondAttribute="bottom" id="vjw-Tv-mgI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="04H-bN-Myd"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="90C-SS-8IN" id="VLG-U1-TRm"/>
                         <outlet property="mFindLocBtn" destination="cDh-pK-Gr5" id="Vpa-O7-hhd"/>
                         <outlet property="mLocationLbl" destination="INE-gS-Ww8" id="2tJ-zZ-6Df"/>
                         <outlet property="mProfileLinkLbl" destination="xbR-Fp-oqX" id="Y18-5m-qhi"/>

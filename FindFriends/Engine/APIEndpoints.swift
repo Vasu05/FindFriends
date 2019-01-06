@@ -24,7 +24,7 @@ class APIEndPoints{
             case .login:
                   return "https://onthemap-api.udacity.com/v1/session"
             case .getUserLocations:
-                return    APIEndPoints.EndPoints.base+"/StudentLocation"
+                return    APIEndPoints.EndPoints.base+"/StudentLocation?limit=100&order=-updatedAt"
             case .postUserLocation:
                 return  APIEndPoints.EndPoints.base+"/StudentLocation"
                 

@@ -51,6 +51,7 @@ class StudentsMapLocationVC: UIViewController {
             Engine.getUsersLocation { (studentData, error) in
                 
                 guard studentData != nil else{
+                    self.showFailure(message: error!.localizedDescription)
                     print("User locations error : \(error?.localizedDescription ?? "errorrr")")
                     return
                 }
@@ -151,7 +152,13 @@ extension StudentsMapLocationVC : MKMapViewDelegate{
                     showFailure(message: "URL Missing...")
                     return
                 }
-                app.openURL(urlvalue)
+                if app.canOpenURL(urlvalue){
+                    app.openURL(urlvalue)
+                }
+                else{
+                    showFailure(message: "Invalid URL...")
+                }
+                
             }
         }
     }

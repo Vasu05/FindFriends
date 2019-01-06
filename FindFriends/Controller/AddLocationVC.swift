@@ -14,6 +14,7 @@ class AddLocationVC: UIViewController {
     @IBOutlet weak var mLocationLbl: UITextField!
     @IBOutlet weak var mProfileLinkLbl: UITextField!
     @IBOutlet weak var mFindLocBtn: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var localSearchRequest:MKLocalSearch.Request!
     var localSearch:MKLocalSearch!
@@ -22,6 +23,7 @@ class AddLocationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        showHideloader(show: false)
         // Do any additional setup after loading the view.
     }
     
@@ -53,8 +55,11 @@ class AddLocationVC: UIViewController {
 
     @IBAction func findLocationBtnPressed(_ sender: Any) {
         
+        showHideloader(show: true)
+
         guard mLocationLbl.text!.count>2 && mProfileLinkLbl.text!.count > 2 else {
             showFailure(message: "Enter correct Details")
+            showHideloader(show: false)
             return
         }
         let locationStr =  mLocationLbl.text
@@ -64,6 +69,8 @@ class AddLocationVC: UIViewController {
         localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.start { (localSearchResponse, error) -> Void in
             
+            self.showHideloader(show: false)
+
             guard (localSearchResponse != nil) else{
                 self.showFailure(message: "Place Not Found")
                 return
@@ -83,6 +90,20 @@ class AddLocationVC: UIViewController {
     
         
     }
+    
+    
+    func showHideloader(show :Bool){
+        
+        if show {
+            activityIndicator.isHidden =  false
+            activityIndicator.startAnimating()
+        }
+        else{
+            activityIndicator.isHidden =  true
+            activityIndicator.stopAnimating()
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
