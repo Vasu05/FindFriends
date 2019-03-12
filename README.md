@@ -6,3 +6,18 @@ This App uses
 - Authenticating a user using over a network connection
 - Creating user interfaces that are responsive, and communicate network activity
 - Use Core Location and the MapKit framework for to display annotated pins on a map
+
+###### login page
+<img src="login.PNG" width="250" height = "400">
+
+###### Home page
+<img src="homepage.PNG" width="250" height = "400">
+
+###### Posted Locations ListView
+<img src="friendsLocationlist.PNG" width="250" height = "400">
+
+###### Post Location 
+<img src="postlocation.PNG" width="250" height = "400">
+
+###### Post Location DetailView
+<img src="postlocationw.PNG" width="250" height = "400">
